@@ -1,6 +1,0 @@
-Example on how to create parameters in Amber and Gromacs
-
-	antechamber -i ../../CleanedFiles/mol.mol2 -fi mol2 -o mol.mol2 -fo mol2 -c bcc
-	parmchk -i mol.mol2 -f mol2 -o mol.frcmod
-	tleap -f leap.in
-	amb2gmx.pl --prmtop mol.prmtop --crd mol.inpcrd --outname mol	

@@ -1,5 +1,0 @@
-source leaprc.gaff
-x = loadmol2 SNF.mol2
-loadamberparams SNF.frcmod 
-saveAmberParm x SNF.prmtop SNF.inpcrd
-quit

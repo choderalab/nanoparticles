@@ -1,5 +1,0 @@
-source leaprc.gaff
-x = loadmol2 SON.mol2
-loadamberparams SON.frcmod 
-saveAmberParm x SON.prmtop SON.inpcrd
-quit

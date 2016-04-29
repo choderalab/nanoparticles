@@ -1,5 +1,0 @@
-source leaprc.gaff
-x = loadmol2 TLB.mol2
-loadamberparams TLB.frcmod 
-saveAmberParm x TLB.prmtop TLB.inpcrd
-quit
