@@ -1,0 +1,11 @@
+In each folder, create a system of non overlapping dye and drug molecules with packmol:
+
+   packmol < packmol.inp
+
+Generate AMBER input files for use with openmm:
+
+    tleap -f leap.in
+
+Then run the (gpu) openmm python script:
+
+    python run.py
