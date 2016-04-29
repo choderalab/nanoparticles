@@ -1,0 +1,5 @@
+source leaprc.gaff
+x = loadmol2 ENZ.mol2
+loadamberparams ENZ.frcmod 
+saveAmberParm x ENZ.prmtop ENZ.inpcrd
+quit

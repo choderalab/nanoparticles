@@ -1,0 +1,268 @@
+log started: Tue Apr 19 14:46:29 2016
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /Users/rossg/miniconda2/bin/../dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.7, Nov 2013)
+> 
+> 4RD = loadmol2 ../../ParamFiles/4R.mol2
+Loading Mol2 file: ../../ParamFiles/4R.mol2
+Reading MOLECULE named 4RD
+> DYE = loadmol2 ../../ParamFiles/IR783.mol2
+Loading Mol2 file: ../../ParamFiles/IR783.mol2
+Reading MOLECULE named DYE
+> loadamberparams ../../ParamFiles/4R.frcmod
+Loading parameters: ../../ParamFiles/4R.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+remark goes here
+> loadamberparams ../../ParamFiles/IR783.frcmod 
+Loading parameters: ../../ParamFiles/IR783.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+remark goes here
+> box = loadpdb system.pdb
+Loading PDB file: ./system.pdb
+Enter zPdbReadScan from call depth  0.
+ (starting new molecule for chain B)
+Exit  zPdbReadScan from call depth  0.
+Matching PDB residue names to LEaP variables.
+(Residue 0: 4RD, Terminal/beginning, was not found in name map.)
+(Residue 1: 4RD, Nonterminal, was not found in name map.)
+(Residue 2: 4RD, Nonterminal, was not found in name map.)
+(Residue 3: 4RD, Nonterminal, was not found in name map.)
+(Residue 4: 4RD, Nonterminal, was not found in name map.)
+(Residue 5: 4RD, Nonterminal, was not found in name map.)
+(Residue 6: 4RD, Nonterminal, was not found in name map.)
+(Residue 7: 4RD, Nonterminal, was not found in name map.)
+(Residue 8: 4RD, Nonterminal, was not found in name map.)
+(Residue 9: 4RD, Nonterminal, was not found in name map.)
+(Residue 10: 4RD, Nonterminal, was not found in name map.)
+(Residue 11: 4RD, Nonterminal, was not found in name map.)
+(Residue 12: 4RD, Nonterminal, was not found in name map.)
+(Residue 13: 4RD, Nonterminal, was not found in name map.)
+(Residue 14: 4RD, Nonterminal, was not found in name map.)
+(Residue 15: 4RD, Nonterminal, was not found in name map.)
+(Residue 16: 4RD, Nonterminal, was not found in name map.)
+(Residue 17: 4RD, Nonterminal, was not found in name map.)
+(Residue 18: 4RD, Nonterminal, was not found in name map.)
+(Residue 19: 4RD, Nonterminal, was not found in name map.)
+(Residue 20: 4RD, Nonterminal, was not found in name map.)
+(Residue 21: 4RD, Nonterminal, was not found in name map.)
+(Residue 22: 4RD, Nonterminal, was not found in name map.)
+(Residue 23: 4RD, Nonterminal, was not found in name map.)
+(Residue 24: 4RD, Nonterminal, was not found in name map.)
+(Residue 25: 4RD, Nonterminal, was not found in name map.)
+(Residue 26: 4RD, Nonterminal, was not found in name map.)
+(Residue 27: 4RD, Nonterminal, was not found in name map.)
+(Residue 28: 4RD, Nonterminal, was not found in name map.)
+(Residue 29: 4RD, Nonterminal, was not found in name map.)
+(Residue 30: 4RD, Nonterminal, was not found in name map.)
+(Residue 31: 4RD, Nonterminal, was not found in name map.)
+(Residue 32: 4RD, Nonterminal, was not found in name map.)
+(Residue 33: 4RD, Nonterminal, was not found in name map.)
+(Residue 34: 4RD, Nonterminal, was not found in name map.)
+(Residue 35: 4RD, Nonterminal, was not found in name map.)
+(Residue 36: 4RD, Nonterminal, was not found in name map.)
+(Residue 37: 4RD, Nonterminal, was not found in name map.)
+(Residue 38: 4RD, Nonterminal, was not found in name map.)
+(Residue 39: 4RD, Nonterminal, was not found in name map.)
+(Residue 40: 4RD, Nonterminal, was not found in name map.)
+(Residue 41: 4RD, Nonterminal, was not found in name map.)
+(Residue 42: 4RD, Nonterminal, was not found in name map.)
+(Residue 43: 4RD, Nonterminal, was not found in name map.)
+(Residue 44: 4RD, Nonterminal, was not found in name map.)
+(Residue 45: 4RD, Nonterminal, was not found in name map.)
+(Residue 46: 4RD, Nonterminal, was not found in name map.)
+(Residue 47: 4RD, Nonterminal, was not found in name map.)
+(Residue 48: 4RD, Nonterminal, was not found in name map.)
+(Residue 49: 4RD, Terminal/last, was not found in name map.)
+(Residue 50: DYE, Terminal/beginning, was not found in name map.)
+(Residue 51: DYE, Nonterminal, was not found in name map.)
+(Residue 52: DYE, Nonterminal, was not found in name map.)
+(Residue 53: DYE, Nonterminal, was not found in name map.)
+(Residue 54: DYE, Nonterminal, was not found in name map.)
+(Residue 55: DYE, Nonterminal, was not found in name map.)
+(Residue 56: DYE, Nonterminal, was not found in name map.)
+(Residue 57: DYE, Nonterminal, was not found in name map.)
+(Residue 58: DYE, Nonterminal, was not found in name map.)
+(Residue 59: DYE, Terminal/last, was not found in name map.)
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with 4RD
+Starting new chain with DYE
+Starting new chain with DYE
+Starting new chain with DYE
+Starting new chain with DYE
+Starting new chain with DYE
+Starting new chain with DYE
+Starting new chain with DYE
+Starting new chain with DYE
+Starting new chain with DYE
+  total atoms in file: 8150
+> setbox box centers
+Box dimensions:  159.241000 156.552000 158.077000
+> # GB radii that are recommended for OBC
+> set default PBRadii mbondi2
+Using H(N)-modified Bondi radii
+> #igb=5
+> saveAmberParm box out.prmtop out.inpcrd
+Checking Unit.
+ERROR: The unperturbed charge of the unit: -10.030110 is not integral.
+WARNING: The unperturbed charge of the unit: -10.030110 is not zero.
+
+ -- ignoring the error and warning.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 930 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	4RD	50
+	DYE	10
+  )
+ (no restraints)
+> quit
+	Quit

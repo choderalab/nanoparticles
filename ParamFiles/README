@@ -1,0 +1,20 @@
+13th April 2016
+
+Command line commands for dye. The total charge of the dye is -1, which is correctly found by antechamber.
+    antechamber  -i ../CleanedFiles/IR783.mol2 -fi mol2 -o 1E.prepi -fo prepi -c bcc
+    antechamber -i IR783.prepi -fi prepi -o IR783.mol2 -fo mol2
+    cp sqm.pdb IR783.pdb
+
+Example for small molecule:
+    antechamber  -i ../CleanedFiles/1E.mol2 -fi mol2 -o 1E.prepi -fo prepi -c bcc
+    cp sqm.pdb 1E.pdb
+    antechamber -i 1E.prepi -fi prepi -o 1E.mol2 -fo mol2
+    rm ANTECHAMBER_* PREP.INF NEWPDB.PDB ATOMTYPE.INF sqm.* 
+    parmchk -i 1E.prepi -f prepi -o 1E.frcmod
+
+I’m also transforming the parameter files into openmm readable xml files:
+    python ~/software/openmoltools/scripts/processAmberForceField.py gaff.dat 1E.mol2 1E.frcmod > 1E.xml
+    python ~/software/openmoltools/scripts/processAmberForceField.py gaff.dat IR783.mol2 IR783.frcmod > IR783.xml
+
+Check the partial charges sum to integer values:
+    sed -e '1,/@<TRIPOS>ATOM/d' -e '/@<TRIPOS>BOND/,$d' 4R.mol2 | awk '{sum+=$9}END{print sum}'

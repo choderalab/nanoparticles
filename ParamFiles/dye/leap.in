@@ -1,0 +1,5 @@
+source leaprc.gaff
+DYE = loadmol2 IR783.mol2
+loadamberparams IR783.frcmod 
+saveAmberParm DYE IR783.prmtop IR783.inpcrd
+quit
