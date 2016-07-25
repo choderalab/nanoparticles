@@ -195,8 +195,8 @@ def nanopipeline(drugmol2,dyemol2,drugname='LIG',dyename='DYE',ndrugs=10,ndye=20
         """
     
     # Parmetrizing with antechamber via openeye:
-    #parametrize_mol(drugmol2,drugname)
-    #parametrize_mol(dyemol2,dyename)
+    parametrize_mol(drugmol2,drugname)
+    parametrize_mol(dyemol2,dyename)
     # Creating box of drugs and dye. Packmol requires PDB files
     mol2pdb(drugname+'_gaff.mol2')
     mol2pdb(dyename+'_gaff.mol2')
