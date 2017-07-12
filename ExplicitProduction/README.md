@@ -4,7 +4,7 @@ The folders `1e`, `2m`, ..., `10v` contain the run scripts and structures from t
 * `Thermalized_bigger.pdb` was created with `run_equil.py` using structures from `../ImplicitAssembly/Nanoparticles`.
 * `submit` is the submission script for Hal that calls `run_explicit.py`.
 * `snapshots.pdb` are frames taken from the simulation.
-* `nanoparticle.pdb` is the final frame of the simulation with all water molecules and ions stripped away.
+* `nanoparticle.pdb` is the centered nanoparticle from the final frame of the simulation with all water molecules and ions stripped away.
 
 ### Manifest
 
