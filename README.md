@@ -1,11 +1,32 @@
 # nanoparticles
 
+Scripts and files for nanoparticle simulations.
+
 ## Manifest
 
-'OriginalFiles/'
+```
+name_list.txt:   the naming scheme of the molecules and simulations.
+```
+
+`ImplicitAssembly`
+```
+Scripts and structures from the assembly of nanoparticles in implicit solvent.
+```
+
+`ExplicitProduction`
+```
+Unbiased molecular dynamics of the model nanoparticles that were created in implicit solvent
+```
+
+`AnalysisTools`
+```
+Python scripts for nanoparticle analysis.
+```
+
+`OriginalFiles/`
 
 ```
-    The original mol2 files of drugs and dye molecules sent to Gregory Ross by Yosef Shanmay.
+    The original mol2 files of drugs and dye molecules sent to Gregory Ross by Yosef Shamay.
 ```
 
 `CleanedFiles/`
@@ -22,13 +43,7 @@
     This procedure will be replaced with parameteriztion with OpenEye from Openmoltools.
 ```
 
-`Production_Implicit_OBC1_longer/`
-
+`GrantFigures`
 ```
-    Packmol and leap scripts to prepare mixtures for 10 molecules. As well as run*.py scripts to perform Openmm
-    implicit solvation simulations upto 300ns. Each simulation comprises of 50 drug molecules and 10
-    dye molecules in a box of 161 by 1 Angstroms 
+Figures produced for the collaborative grant with the Heller Lab.
 ```
-
-
-

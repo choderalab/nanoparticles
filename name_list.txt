@@ -1,0 +1,19 @@
+1E-Erlotinib – aggregates and doesn’t form particle
+
+2M- MEK162- Does not form particle but does not aggregate
+
+3T-TAK632- Forms beautiful particles
+
+4R-Rapamycin- Forms nanoparticles
+
+5S-Silvestrol- Aggregates and doesn’t form particles
+
+6S-Sorafenib- Forms beautiful particles
+
+7T-talazoparib does not form a particle
+
+8T-Taselisib- doesn’t form a particle
+
+9T-Trametinib Forms nanoparticle
+
+10V-Valrubicin forms beautiful nanoparticles
