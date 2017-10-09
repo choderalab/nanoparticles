@@ -4,6 +4,11 @@ Scripts and files for nanoparticle simulations.
 
 ## Manifest
 
+`DLSdata`
+```
+Data and analysis for high throughput constant pH experiment conducted by Mehtap. 
+```
+
 ```
 name_list.txt:   the naming scheme of the molecules and simulations.
 ```
