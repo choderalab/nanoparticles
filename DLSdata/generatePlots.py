@@ -1,6 +1,6 @@
 from matplotlib import pyplot as plt
 import pandas as pd
-"""Script to generate plots from .csv's"""
+"""Script to generate radius, PDI, and amplitude plots from .csv's"""
 
 # Experiment variables
 pH = [4, 5, 6, 7, 8]

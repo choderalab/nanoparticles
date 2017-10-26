@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 
 """
+Script to import Wyatt DLS data such as in 20170707_MI_INP_DLS_1s_10aq_exp_t1h_t2h_all_individual_acquisitions.xlsx
 **GRANT IS DUE NOVEMBER 21ST**
 
   Plots to generate
