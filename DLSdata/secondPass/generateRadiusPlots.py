@@ -3,6 +3,7 @@ import pandas as pd
 """
 Script to generate radius, PDI, and amplitude plots from .csv's generated with rejection criteria
 -Wells with <10 acquisitions were rejected
+-All 3 measurements will be plotted if available
 """
 
 # Experiment variables
@@ -17,7 +18,21 @@ df_25h = pd.read_csv('../DLSdata/secondPass/Radius/t25h_allWellsRadius.csv')
 df_49h = pd.read_csv('../DLSdata/secondPass/Radius/t49h_allWellsRadius.csv')
 df_73h = pd.read_csv('../DLSdata/secondPass/Radius/t73h_allWellsRadius.csv')
 
-# Radius vs time plots for each drug
-# plot(time, pH4_R, time, pH5_R, pH_6
+def makeRadiusArray(drugStr):
+    """
+    :param drugStr: 3 letter drug abbrev str
+    :returns: array
+    """
+    drugDict= {'sfb': 0, 'nil': 1, 'ptx': 2, 'trm': 3, 'dab': 4, 'pbs': 5}
+    array = [df_1h.loc[drugDict[drugStr], '1':'3'],
+             df_2h.loc[drugDict[drugStr], '1':'3'],
+             df_25h.loc[drugDict[drugStr], '1':'3'],
+             df_49h.loc[drugDict[drugStr], '1':'3'],
+             df_73h.loc[drugDict[drugStr], '1':'3']]
+    return array
 
-print(df_1h.iloc[1,2:17])
+# Radius vs time plots for each drug
+
+print(makeRadiusArray('sfb'))
+plt.plot([1, 1, 1], makeRadiusArray('sfb')[0], 'bo')
+plt.show()
