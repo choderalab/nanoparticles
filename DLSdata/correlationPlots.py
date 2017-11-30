@@ -1,8 +1,8 @@
 from matplotlib import pyplot as plt
 import pandas as pd
-from scipy.stats import chisquare
 import seaborn as sns
 import sys
+from matplotlib.backends.backend_pdf import PdfPages
 
 """Script to generate plots to compare correlogram data of different samples
 
@@ -47,7 +47,9 @@ def plotCorrelogram(drugRow, hour):
     plt.ylabel("ACF")
     plt.title(drugDict[drugRow]+', time = '+str(hour)+' hours')
     plt.legend(pH, title='pH', loc=1)
-    plt.savefig('ACF_'+drugDict[drugRow]+'_'+hour+'h.png')
+    # plt.savefig('ACF_'+drugDict[drugRow]+'_'+hour+'h.svg') #saves each plot as .svg
+    with PdfPages('multipage_pdf'+drugDict[drugRow]+str(hour)+'.pdf') as pdf: #saving each plot as separate PDF
+        pdf.savefig()
     plt.clf()
 
 def generateCorrelograms():
